@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins&display=swap');
+
+
+header {
+    background: #FE5E41;
+}
+
+/* Breadcrumb */
+
+.breadcrumb-item {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #1E1E1E;
+}
+
+/* Product name */
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+background: #F2F2F2;
+}
+
+
+/* Product description */
+
+.more-info {
+    box-sizing: border-box;
+    width: 140px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    color: #FE5E41;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Table */
+
+.table_section {
+    background: #F2F2F2;
+}
+
+
+
+.table th {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FE5E41;
+}
