@@ -211,7 +211,7 @@ header {
 }
 
 .breadcrumb-item {
-@include fontFamily-inter;
+    @include fontFamily-inter;
     font-size: 13px;
     color: $black;
     padding: 40px 0;
@@ -384,10 +384,11 @@ header {
 }
 
 tbody {
-    tr {
-        --bs-table-striped-bg: $white;
+    tr:nth-child(odd) {
+        background-color: $white;
     }
 }
+
 
 .modal-content {
     padding: 20px 32px;
