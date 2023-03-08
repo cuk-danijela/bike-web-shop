@@ -1,0 +1,461 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$font-poppins: 'Poppins', sans-serif;
+$font-inter: 'Inter', sans-serif;
+$font-14: 14px;
+
+$border-transparent: 1px solid transparent;
+$border-radius-4: 4px;
+
+$black: #1E1E1E;
+$white: #ffffff;
+$light: #F2F2F2;
+$orange: #FE5E41;
+$green: #00A878;
+
+@mixin font-14-line-24 {
+    font-size: $font-14;
+    line-height: 24px;
+}
+
+@mixin font-16-line-24 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin font-18-line-24 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@mixin theme($font-family: 'Arial') {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin fontFamily-inter {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+@media (max-width: 576px) {
+    header {
+        height: 70px !important;
+        padding: 8px !important;
+    }
+
+    .navbar-light {
+        .navbar-toggler-icon {
+            background-image: url('./images/bars.svg') !important;
+            background-size: 30px 20px;
+        }
+
+        .navbar-toggler {
+            border-color: transparent !important;
+            padding: 0;
+            margin-right: 30px;
+            color: $white;
+        }
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 105px;
+        height: 28px;
+        margin-right: 0 !important;
+    }
+
+    .breadcrumb-item {
+        padding: 31px 0 18px 0 !important;
+    }
+
+    .h1-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+    }
+
+    .h2-title {
+        margin-top: 20px;
+    }
+
+    .parent {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .grey-container {
+        margin-top: 23px;
+        padding: 24px 16px 32px 24px !important;
+    }
+
+    .grid-container {
+        display: block !important;
+    }
+
+    .product-links {
+        p {
+            font-size: $font-14;
+            margin-right: 11px !important;
+        }
+    }
+
+    .table_section {
+        overflow: hidden;
+    }
+}
+
+.orange {
+    color: $orange;
+}
+
+.green {
+    background-color: $green;
+}
+
+.search-input {
+    @include fontFamily-inter;
+    font-size: $font-14;
+    color: $black;
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding: 19px 16px;
+    margin-left: 40px;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    background-color: $light;
+    border-radius: 4px 4px 0 0;
+}
+
+.h1-title {
+    @include theme($font-family: 'Poppins');
+    font-size: 40px;
+    line-height: 48px;
+    color: $black;
+}
+
+.h2-title {
+    @include theme($font-family: 'Poppins');
+    font-size: 28px;
+    line-height: 36px;
+    color: $black;
+}
+
+header {
+    background: $orange;
+    height: 120px;
+    padding: 30px;
+}
+
+.logo {
+    margin-right: 58px;
+}
+
+.nav-item {
+    margin-right: 40px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-item-icons {
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-icons {
+    &:last-child {
+        margin-right: 0;
+    }
+
+    margin-right: 24px;
+}
+
+.navbar-nav {
+    height: 40px;
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            @include theme($font-family: 'Inter');
+            @include font-18-line-24;
+        }
+    }
+}
+
+.nav-link.active {
+    @include theme($font-family: 'Inter');
+    @include font-18-line-24;
+    padding-bottom: 45px;
+    color: $black  !important;
+    border-bottom: 5px solid #000000;
+}
+
+.breadcrumb-item {
+@include fontFamily-inter;
+    font-size: 13px;
+    color: $black;
+    padding: 40px 0;
+}
+
+.carousel-control-prev-icon {
+    padding: 20px;
+    background-color: $light;
+    border-radius: 100%;
+    background-size: 15px 24px !important;
+    background-image: url('./images/chevron-left.svg') !important;
+}
+
+.carousel-control-next-icon {
+    padding: 20px;
+    background-color: $light;
+    border-radius: 100%;
+    background-size: 15px 24px !important;
+    background-image: url('./images/chevron-right.svg') !important;
+}
+
+.grey-container {
+    background: $light;
+    padding: 24px 32px 66px 32px;
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        @include font-16-line-24;
+        color: $black;
+    }
+
+    label {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        @include font-14-line-24;
+        color: $black;
+    }
+}
+
+.form-check-input {
+    width: 18px;
+    height: 20px;
+    border-color: #BDBDBD;
+
+    &:checked {
+        background-color: $green  !important;
+        border-color: $green  !important;
+        width: 18px;
+        height: 20px;
+        margin-right: 8px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.product-select {
+    display: block;
+    width: 100%;
+    padding: 19px 8px;
+    @include fontFamily-inter;
+    font-size: $font-14;
+    height: 56px;
+    color: $black;
+    background-color: $white;
+    background-clip: padding-box;
+    border: $border-transparent;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 4px 4px 0 0;
+}
+
+.form-floating {
+    >label {
+        transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+        @include fontFamily-inter;
+        font-size: 11px;
+        color: #6E6E6E;
+    }
+}
+
+.dark-btn {
+    box-sizing: border-box;
+    border: 1px solid #DEDEDE;
+    border-radius: $border-radius-4;
+    background-color: $green;
+    @include theme($font-family: 'Poppins');
+    @include font-16-line-24;
+    color: $white;
+    margin: 26px 6px 0 0;
+    padding: 11px 25px 13px 25px;
+}
+
+.light-btn {
+    box-sizing: border-box;
+    border: 1px solid #DEDEDE;
+    border-radius: $border-radius-4;
+    background-color: $white;
+    @include theme($font-family: 'Poppins');
+    @include font-16-line-24;
+    color: $green;
+    margin: 26px 8px 0 0;
+    padding: 11px 25px 13px 25px;
+}
+
+.product-links {
+    padding: 20px 0;
+
+    p {
+        @include theme($font-family: 'Inter');
+        @include font-16-line-24;
+        color: $black;
+        margin: 0 32px 20px 0;
+        display: inline;
+    }
+}
+
+.product_section {
+    padding: 60px 0;
+
+    p {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        @include font-16-line-24;
+        color: $black;
+        margin-top: 32px;
+    }
+}
+
+.more-info {
+    box-sizing: border-box;
+    width: 140px;
+    height: 48px;
+    background: $white;
+    border: 1px solid #DEDEDE;
+    border-radius: $border-radius-4;
+    color: $orange;
+    @include theme($font-family: 'Poppins');
+    @include font-16-line-24;
+    margin-top: 25px;
+}
+
+.table_section {
+    background: $light;
+    padding: 39px 0 59px 0;
+}
+
+.table {
+    margin: 30px 0;
+
+    th {
+        @include theme($font-family: 'Inter');
+        @include font-14-line-24;
+        color: $orange;
+    }
+
+    td {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        @include font-14-line-24;
+        color: $black;
+    }
+}
+
+tbody {
+    tr {
+        --bs-table-striped-bg: $white;
+    }
+}
+
+.modal-content {
+    padding: 20px 32px;
+}
+
+.modal-header {
+    border-bottom: 0 !important;
+}
+
+.btn-close {
+    background: url('./images/times.svg') transparent center/1em auto no-repeat !important;
+}
+
+.modal-title {
+    @include theme($font-family: 'Poppins');
+    font-size: 24px;
+    line-height: 32px;
+    color: $black;
+}
+
+.modal-body {
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        @include font-16-line-24;
+        color: $black;
+        margin-bottom: 24px;
+    }
+}
+
+.modal-input {
+    display: block;
+    width: 100%;
+    padding: 19px 16px;
+    @include fontFamily-inter;
+    font-size: $font-14;
+    height: 56px;
+    color: $black;
+    background-color: $light;
+    background-clip: padding-box;
+    border: $border-transparent;
+    border-bottom: 1px solid #DEDEDE;
+    border-radius: 4px 4px 0 0;
+}
+
+.modal-btn-link {
+    @include theme($font-family: 'Poppins');
+    @include font-16-line-24;
+    color: $orange  !important;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.modal-submit {
+    @include theme($font-family: 'Poppins');
+    @include font-16-line-24;
+    color: $white;
+    background-color: $orange;
+    border: $border-transparent;
+    border-radius: $border-radius-4;
+    padding: 11px 19px 13px 20px;
+}
+
+.modal-footer {
+    border-top: 0 !important;
+}
